@@ -1,0 +1,16 @@
+name: PR validation (skip)
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - notes/*
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run tests
+        run: echo "skippitty skip skip"
+      
